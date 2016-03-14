@@ -1,0 +1,93 @@
+body {
+	background-color: #e4e7ea;
+	font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+}
+
+.player-thumbnail  {
+	position: relative;	
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+	display: inline-block;
+}
+
+.player-thumbnail.selected  {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border: 3px dotted #2199e8;
+}
+
+.player-thumbnail label {
+	cursor: pointer;
+}
+
+.player-thumbnail .level {
+	position: absolute;
+	top: 3px;
+	left: 5px;
+}
+
+.player-thumbnail .name {
+	position: absolute;
+	bottom: 3px;
+	left: 5px;
+}
+
+.player-thumbnail .remainder {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+}
+
+.player-thumbnail .remainder .badge {
+	font-size: 1rem;
+}
+
+.live-players .player-thumbnail .remainder .badge {
+	font-size: 1.75rem;
+}
+
+.player-thumbnail .level-value {
+	background: #000;
+}
+
+.player-thumbnail .level-0,
+.player-thumbnail .level-1,
+.player-thumbnail .level-2
+{
+	background: #FFF;
+	color: #000;
+}
+
+.player-thumbnail .level-3,
+.player-thumbnail .level-4,
+.player-thumbnail .level-5
+{
+	background: green;
+}
+
+.player-thumbnail .level-6,
+.player-thumbnail .level-7,
+.player-thumbnail .level-8
+{
+	background: #2199e8;
+}
+
+.player-thumbnail .level-9,
+.player-thumbnail .level-10,
+.player-thumbnail .level-11,
+.player-thumbnail .level-12,
+.player-thumbnail .level-13
+{
+	background: orange;
+}
+
+.player-thumbnail .level-14,
+.player-thumbnail .level-15,
+.player-thumbnail .level-16
+.player-thumbnail .level-17,
+.player-thumbnail .level-18,
+.player-thumbnail .level-19
+{
+	background: red;
+}

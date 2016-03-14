@@ -5,14 +5,43 @@
 	<meta charset="utf-8">
 
 	<title><?php echo isset($title) ? $title : null; ?></title>
-	<meta name="author" content="Aurélien">
+	<meta name="author" content="Aurï¿½lien">
 	
-	<?php echo Asset::css('foundation.min.css'); ?>
-	<?php echo Asset::css('vendor/fa/font-awesome.min.css'); ?>
+	<?php echo Asset::css(array(
+		'foundation.min.css',
+		'vendor/fa/font-awesome.min.css',
+		'template.css',
+		'loading.css',
+	)); ?>
 	
-	<?php echo Asset::js('jquery-2.2.0.min.js'); ?>
+	<?php echo isset($css) ? Asset::css($css) : null;?>
+	
+	<?php echo Asset::js(array(
+		'jquery-2.2.0.min.js',
+		'foundation.min.js',
+		'template.js',
+	)); ?>
+	
+	<?php echo isset($js) ? Asset::js($js) : null;?>
 </head>
 
 <body>
+	<div id="message" class="row hide">
+		<div class="small-12 columns">
+			<div class="callout" data-closable>
+				<p class="content"></p>
+				<button class="close-button" type="button" data-close>
+			    	<span aria-hidden="true">&times;</span>
+			  	</button>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<?php echo isset($content) ? $content : null; ?>
+	</div>
+	
+	<script>
+		$(document).foundation();
+	</script>
 </body>
 </html>
