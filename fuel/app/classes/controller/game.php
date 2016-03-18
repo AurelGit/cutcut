@@ -97,4 +97,26 @@ class Controller_Game extends Controller_Template
 		
 		$this->template->content = $view;
 	}
+	
+	public function action_stat($game_id)
+	{
+		$this->template->js = array(
+			'vendor/flot/jquery.flot.min.js',
+			'game/stat.js',
+		);
+		$this->template->css = array(
+			'game/stat.css',
+		);
+		
+		$this->template->title = 'Statistiques';
+		
+		if (!($game = Model_Game::find_by_pk($game_id))) {
+			return Response::redirect(Config::get('routes._root_'));
+		}
+		
+		$view = Presenter::forge('game/stat');
+		$view->set('game', $game);
+		
+		$this->template->content = $view;
+	}
 }
