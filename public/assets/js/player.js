@@ -1,6 +1,8 @@
 $(function() {
-	$('form').submit(function() {
+	$('form').submit(function(e) {
 		var form_data = new FormData($('form')[0]);
+		
+		form_data.append('sounds[]', ('#sounds')[0].files);
 		
 	    $.ajax({
 	        url: '/rest/player/save.json',

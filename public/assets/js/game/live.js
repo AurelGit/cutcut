@@ -24,6 +24,11 @@ $(function() {
 			}
 		});
 	});
+	
+	$('.player-thumbnail').find('.picture').click(function() {
+		var id = $(this).closest('.player-thumbnail').data('id');
+		document.getElementById('sound-'+id).play();
+	});
 });
 
 

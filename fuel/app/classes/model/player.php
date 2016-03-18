@@ -22,6 +22,11 @@ class Model_Player extends Model_Crud
 		'firstname'		=> 'required',
 	);
 	
+	/**
+	 * @var Model_Player_Sound[]
+	 */
+	protected $_sounds = false;
+	
 	public function get_picture()
 	{
 		$filename = 'player/'.$this->id().'.jpg';
@@ -44,5 +49,17 @@ class Model_Player extends Model_Crud
 		$view->set('player', $this);
 		
 		return $view;
+	}
+	
+	/**
+	 * @return Model_Player_Sound[]
+	 */
+	public function get_sounds()
+	{
+		if ($this->_sounds === false) {
+			$this->_sounds = Model_Player_Sound::find_by('player_id', $this->id());
+		}
+		
+		return $this->_sounds;
 	}
 }

@@ -21,6 +21,7 @@
 		'jquery-2.2.0.min.js',
 		'foundation.min.js',
 		'template.js',
+// 		'vendor/what-input.min.js',
 	)); ?>
 	
 	<?php echo isset($js) ? Asset::js($js) : null;?>

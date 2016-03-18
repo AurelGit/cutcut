@@ -49,6 +49,21 @@
 	</div>
 </div>
 
+<hr/>
+
+<div class="row">
+	<div class="small-12 columns">
+		<label>
+			Son
+			<?php echo Form::file(array(
+				'id'		=> 'sounds',
+				'name'		=> 'sounds[]',
+			)); ?>
+		</label>
+	</div>
+</div>
+
+<hr/>
 
 <div class="row">
 	<div class="small-12 columns">
