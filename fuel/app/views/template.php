@@ -3,6 +3,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 
 	<title><?php echo isset($title) ? $title : null; ?></title>
 	<meta name="author" content="Aur�lien">

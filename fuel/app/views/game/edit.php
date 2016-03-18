@@ -18,7 +18,6 @@
 			'name'		=> 'submit',
 			'value'		=> 'Commencer une nouvelle partie',
 			'class'		=> 'button expanded',
-			'style'		=> 'position: fixed; bottom: 0;'
 		)); ?>
 	</div>
 </div>
